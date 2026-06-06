@@ -22,15 +22,14 @@ The game logic is separated into decoupled, dedicated classes to handle distinct
 * **`ScoreSheet.java`**: The core logic center for calculating scores. Tracks filled categories, totals points, and uses data-stream filtering to compute complex combinations like straights.
 
 ### Class Dependencies
-
-// ```mermaid
+```mermaid
 classDiagram
     Main --> Game : Starts
     Game "1" *-- "1..6" Player : Manages
     Game "1" *-- "1" DiceCup : Directs
     Player "1" *-- "1" ScoreSheet : Owns
     DiceCup "1" *-- "5" Die : Combines
-
+```
 
 ## Prerequisites
 Java Development Kit (JDK) 21 or higher.
@@ -54,7 +53,7 @@ cd YOUR-REPOSITORY-NAME
 5. Scoring: After your 3rd roll (or if you stop early), review your options and select a category number (1–13) to log your points.
 
 ## Project Structure
-'''text
+```text
 Yahtzee/
 ├── .gitignore
 ├── README.md
