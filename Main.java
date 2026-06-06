@@ -11,7 +11,7 @@ public class Main {
         System.out.println("=================================");
         System.out.println("Roll the dice, hold what you want, and score!\n");
         
-        System.out.print("Enter number of players (1–6): ");
+        System.out.print("Enter number of players (1-6): ");
         
         // Input validation to ensure an integer is actually entered
         while (!scanner.hasNextInt()) {
