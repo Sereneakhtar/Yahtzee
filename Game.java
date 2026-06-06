@@ -43,7 +43,7 @@ public class Game {
     }
     private void takeTurn(Player player, int round) {
     	System.out.println("---------------------------------");
-        System.out.println("\n" + player.getName() + " — Round " + round);
+    	System.out.println("\n" + player.getName() + " - Round " + round);
         cup.resetHolds();
 
         for (int roll = 1; roll <= 3; roll++) {
