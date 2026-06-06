@@ -23,7 +23,7 @@ The game logic is separated into decoupled, dedicated classes to handle distinct
 
 ### Class Dependencies
 
-```mermaid
+// ```mermaid
 classDiagram
     Main --> Game : Starts
     Game "1" *-- "1..6" Player : Manages
@@ -31,3 +31,40 @@ classDiagram
     Player "1" *-- "1" ScoreSheet : Owns
     DiceCup "1" *-- "5" Die : Combines
 
+
+## Prerequisites
+Java Development Kit (JDK) 21 or higher.
+Terminal / Command Prompt access, or an IDE like Eclipse / IntelliJ IDEA.
+
+## How to run via Terminal
+1. Clone the repository
+   git clone [https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME.git](https://github.com/YOUR-USERNAME/YOUR-REPOSITORY-NAME.git)
+cd YOUR-REPOSITORY-NAME
+2. Compile the Source Files: create a target directory for compiled classes and run the Java Compiler:
+   mkdir -p bin
+   javac -d bin src/yahtzee/*.java
+3. Launch the game
+   java -cp bin yahtzee.Main
+
+## How to Play
+1. Setup: Enter the number of players (1 to 6) when prompted.
+2. Rolling: On your turn, the game rolls all 5 dice automatically.
+3. Holding Dice: Input the die number (1–5) to lock it in place. An asterisk * indicates a held die. Input the number again to release it.
+4. Re-rolling: Type -1 when you are satisfied with your holds to roll the remaining unheld dice. You get up to 3 total rolls per turn.
+5. Scoring: After your 3rd roll (or if you stop early), review your options and select a category number (1–13) to log your points.
+
+## Project Structure
+'''text
+Yahtzee/
+├── .gitignore
+├── README.md
+├── module-info.java
+└── src/
+    └── yahtzee/
+        ├── DiceCup.java
+        ├── Die.java
+        ├── Game.java
+        ├── Main.java
+        ├── Player.java
+        └── ScoreSheet.java
+    
